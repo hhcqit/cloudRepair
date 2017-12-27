@@ -1,58 +1,27 @@
-<style scoped>
-    .index {
-        width: 100%;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        text-align: center;
-    }
-
-    .index h1 {
-        height: 150px;
-    }
-
-    .index h1 img {
-        height: 100%;
-    }
-
-    .index h2 {
-        color: #666;
-        margin-bottom: 200px;
-    }
-
-    .index h2 p {
-        margin: 0 0 50px;
-    }
-
-    .index .ivu-row-flex {
-        height: 100%;
+<template>
+    <Menu mode="horizontal" theme="primary"  active-name="1">
+        <MenuItem name="0">
+            <Icon type="ios-paper"></Icon>
+            科临脉云设备管理平台
+        </MenuItem>
+        <MenuItem name="1" style="float:right">
+            <Icon type="ios-paper"></Icon>
+            实验室加入
+        </MenuItem>
+        <MenuItem name="2" style="float:right">
+            <Icon type="ios-people"></Icon>
+            服务商加入
+        </MenuItem>
+    </Menu>
+    <p></p>
+</template>
+<style>
+    .ivu-menu-horizontal .ivu-menu-item{
+        float:right;
     }
 </style>
-<template>
-    <div class="index">
-        <Row type="flex" justify="center" align="middle">
-            <Col span="24">
-                <h1>
-                    <img src="https://raw.githubusercontent.com/iview/iview/master/assets/logo.png">
-                </h1>
-                <h2>
-                    <p>Welcome to your iView app!</p>
-                    <Button type="ghost" @click="handleStart">Start iView</Button>
-                </h2>
-            </Col>
-        </Row>
-    </div>
-</template>
 <script>
     export default {
-        methods: {
-            handleStart() {
-                this.$Modal.info({
-                    title: 'Bravo',
-                    content: 'Now, enjoy the convenience of iView.'
-                });
-            }
-        }
-    };
+
+    }
 </script>
